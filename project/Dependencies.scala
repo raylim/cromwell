@@ -4,7 +4,7 @@ object Dependencies {
   lazy val lenthallV = "0.27"
   lazy val wdl4sV = "0.16-8e70bee-SNAP"
 
-  lazy val akkaV = "2.5.3"
+  lazy val akkaV = "2.5.4"
   lazy val akkaHttpV = "10.0.9"
 
   lazy val slickV = "3.2.0"
@@ -130,7 +130,9 @@ object Dependencies {
     "com.google.auth" % "google-auth-library-oauth2-http" % "0.7.0",
     "com.typesafe.akka" %% "akka-stream-testkit" % akkaV,
     "com.chuusai" %% "shapeless" % "2.3.2",
-    "com.github.scopt" %% "scopt" % "3.6.0"
+    "com.github.scopt" %% "scopt" % "3.6.0",
+    "org.broadinstitute" %% "akka-statsd-core" % "2.1.6-SNAPSHOT",
+    "org.broadinstitute.dsde.workbench" %% "workbench-metrics" % "0.2-61b7be2"
   ) ++ baseDependencies ++ googleApiClientDependencies ++
     // TODO: We're not using the "F" in slf4j. Core only supports logback, specifically the WorkflowLogger.
     slf4jBindingDependencies
